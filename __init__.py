@@ -324,6 +324,14 @@ _HANDLERS = {
 }
 
 
+def _safe_handler(handler, args):
+    """Wrap a handler so API errors return JSON instead of raising."""
+    try:
+        return handler(args or {})
+    except Exception as e:
+        return json.dumps({"error": str(e)}, indent=2)
+
+
 def register(ctx: PluginContext) -> None:
     """Register dat.ai tools with the Hermes plugin manager."""
     for name, schema in _TOOL_SCHEMAS.items():
@@ -332,7 +340,7 @@ def register(ctx: PluginContext) -> None:
             name=name,
             toolset="dat-ai",
             schema=schema,
-            handler=lambda args, _h=handler, **kw: _h(args or {}, **kw),
+            handler=lambda args, _h=handler, **kw: _safe_handler(_h, args),
             check_fn=lambda _k=os.environ.get("DAT_AI_API_KEY"): bool(_k),
             requires_env=["DAT_AI_API_KEY"],
         )
