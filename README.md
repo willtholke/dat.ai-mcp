@@ -4,7 +4,7 @@
 
 # dat.ai MCP Server
 
-*Browser automation, transcription, and LLM chat–as MCP tools for any agent.*
+*Browser automation, transcription, and LLM chat as MCP tools for any agent.*
 
 ![license](https://img.shields.io/badge/license-MIT-blue)
 ![pypi](https://img.shields.io/badge/pypi-dat--ai--mcp-red)
