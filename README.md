@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/dat-logo.png" width="120" alt="dat.ai" />
+<img src="assets/dat-logo-white.png" width="160" alt="dat.ai" />
 
 # dat.ai MCP
 
