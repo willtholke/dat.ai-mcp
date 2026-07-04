@@ -31,9 +31,25 @@
 
 ### Get an API key
 
-Sign up at [dat.ai](https://dat.ai) and get your API key from the dashboard.
+Sign up at [dat.ai](https://dat.ai) and get your API key from the dashboard. See the [official API docs](https://dat-48188875.mintlify.app/pages/introduction) for reference.
 
-### Install
+### Hermes Agent (one-line install)
+
+```bash
+hermes plugins install willtholke/dat.ai-mcp --enable
+```
+
+Restart Hermes after installing. Set your API key in `~/.hermes/.env`:
+
+```
+DAT_AI_API_KEY=your-api-key-here
+```
+
+The plugin registers all 7 tools as native Hermes tools. No MCP config needed.
+
+### Other MCP clients
+
+Install the package:
 
 ```bash
 pip install dat-ai-mcp
@@ -45,24 +61,7 @@ Or use directly with `uvx` (no install needed):
 uvx dat-ai-mcp
 ```
 
-### Configure your MCP client
-
 Set the `DAT_AI_API_KEY` environment variable and add the server to your MCP client config
-
-#### Hermes Agent
-
-Add to `~/.hermes/config.yaml` under `mcp_servers`:
-
-```yaml
-mcp_servers:
-  dat-ai:
-    command: uvx
-    args:
-      - dat-ai-mcp
-    env:
-      DAT_AI_API_KEY: your-api-key-here
-    timeout: 600
-```
 
 #### Claude Desktop
 
