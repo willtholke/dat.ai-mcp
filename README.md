@@ -2,7 +2,7 @@
 
 <img src="assets/dat-logo-white.png" width="180" alt="dat.ai" />
 
-# dat.ai MCP
+# dat.ai MCP Server
 
 *Browser automation, transcription, and LLM chat–as MCP tools for any agent.*
 
@@ -130,6 +130,6 @@ Special thanks to dat.ai co-founder & COO Eugenia Dushina for setting me up with
 
 <div align="center">
 
-<sub>Built by [Will Tholke](https://github.com/willtholke). Powered by [dat.ai](https://dat.ai).</sub>
+<sub>Powered by [dat.ai](https://www.dat.ai/)</sub>
 
 </div>
