@@ -139,9 +139,3 @@ pip install -e .
 Special thanks to dat.ai co-founder & COO Eugenia Dushina for setting me up with the platform
 
 ---
-
-<div align="center">
-
-<sub>Powered by [dat.ai](https://www.dat.ai/)</sub>
-
-</div>
