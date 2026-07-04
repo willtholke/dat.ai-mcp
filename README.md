@@ -120,7 +120,7 @@ npm run build
 
 ## License
 
-MIT
+[MIT](LICENSE)
 
 ---
 
