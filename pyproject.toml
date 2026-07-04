@@ -1,0 +1,21 @@
+[project]
+name = "dat-ai-mcp"
+version = "1.0.0"
+description = "MCP server for dat.ai API - browser automation, transcription, and LLM chat completions"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "httpx>=0.27.0",
+]
+
+[project.scripts]
+dat-ai-mcp = "dat_ai_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dat_ai_mcp"]
