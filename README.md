@@ -120,6 +120,28 @@ dat_completions({
 })
 ```
 
+## Troubleshooting
+
+### Tools not appearing in Hermes
+
+If the dat.ai tools don't show up after installing the plugin:
+
+1. **Don't also add an MCP server entry.** The Hermes plugin registers all 7 tools as native Hermes tools. Adding a `dat-ai` entry to `mcp_servers` in config.yaml creates a redundant subprocess that can conflict with the native plugin. The plugin is the correct path — no MCP config needed.
+
+2. **Verify the plugin is enabled:**
+   ```bash
+   hermes plugins list
+   ```
+   `dat-ai` should show as `enabled`.
+
+3. **Verify the toolset is enabled for your platform:**
+   ```bash
+   hermes tools list
+   ```
+   `dat-ai` should appear under "Plugin toolsets" as enabled. If not, run `hermes tools` and enable it.
+
+4. **Restart Hermes** after config changes. Plugin tool definitions are cached per-session.
+
 ## Development
 
 ```bash
