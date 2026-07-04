@@ -1,7 +1,9 @@
-node_modules/
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
 dist/
-*.js
-*.d.ts
-!jest.config.js
+build/
 .env
 .DS_Store
+node_modules/
