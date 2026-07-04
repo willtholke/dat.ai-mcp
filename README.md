@@ -7,7 +7,6 @@
 *Browser automation, transcription, and LLM chat as MCP tools for any agent.*
 
 ![license](https://img.shields.io/badge/license-MIT-blue)
-![pypi](https://img.shields.io/badge/pypi-dat--ai--mcp-red)
 ![tools](https://img.shields.io/badge/tools-7-green)
 ![python](https://img.shields.io/badge/python-3.10+-blue)
 
