@@ -7,8 +7,9 @@
 *Browser automation, transcription, and LLM chat–as MCP tools for any agent.*
 
 ![license](https://img.shields.io/badge/license-MIT-blue)
-![npm](https://img.shields.io/badge/npm-dat.ai--mcp-red)
+![pypi](https://img.shields.io/badge/pypi-dat--ai--mcp-red)
 ![tools](https://img.shields.io/badge/tools-7-green)
+![python](https://img.shields.io/badge/python-3.10+-blue)
 
 </div>
 
@@ -32,6 +33,18 @@
 
 Sign up at [dat.ai](https://dat.ai) and get your API key from the dashboard.
 
+### Install
+
+```bash
+pip install dat-ai-mcp
+```
+
+Or use directly with `uvx` (no install needed):
+
+```bash
+uvx dat-ai-mcp
+```
+
 ### Configure your MCP client
 
 Set the `DAT_AI_API_KEY` environment variable and add the server to your MCP client config
@@ -43,10 +56,9 @@ Add to `~/.hermes/config.yaml` under `mcp_servers`:
 ```yaml
 mcp_servers:
   dat-ai:
-    command: npx
+    command: uvx
     args:
-      - -y
-      - dat.ai-mcp
+      - dat-ai-mcp
     env:
       DAT_AI_API_KEY: your-api-key-here
     timeout: 600
@@ -60,8 +72,8 @@ Add to `claude_desktop_config.json`:
 {
   "mcpServers": {
     "dat-ai": {
-      "command": "npx",
-      "args": ["-y", "dat.ai-mcp"],
+      "command": "uvx",
+      "args": ["dat-ai-mcp"],
       "env": {
         "DAT_AI_API_KEY": "your-api-key-here"
       }
@@ -72,7 +84,7 @@ Add to `claude_desktop_config.json`:
 
 #### Cursor / other MCP clients
 
-Same pattern: command `npx`, args `["-y", "dat.ai-mcp"]`, env `DAT_AI_API_KEY`
+Same pattern: command `uvx`, args `["dat-ai-mcp"]`, env `DAT_AI_API_KEY`
 
 ### Environment variable
 
@@ -114,8 +126,9 @@ dat_completions({
 ```bash
 git clone https://github.com/willtholke/dat.ai-mcp.git
 cd dat.ai-mcp
-npm install
-npm run build
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
 ```
 
 ## License
