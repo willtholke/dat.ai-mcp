@@ -1,11 +1,11 @@
 {
-  "name": "dat-ai-mcp",
+  "name": "dat.ai-mcp",
   "version": "1.0.0",
   "description": "MCP server for dat.ai API - browser automation, transcription, and LLM chat completions",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "dat-ai-mcp": "dist/index.js"
+    "dat.ai-mcp": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",

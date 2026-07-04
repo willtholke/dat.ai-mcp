@@ -7,7 +7,7 @@
 *Browser automation, transcription, and LLM chat — as MCP tools for any agent.*
 
 ![license](https://img.shields.io/badge/license-MIT-blue)
-![npm](https://img.shields.io/badge/npm-dat--ai--mcp-red)
+![npm](https://img.shields.io/badge/npm-dat.ai--mcp-red)
 ![tools](https://img.shields.io/badge/tools-7-green)
 ![protocol](https://img.shields.io/badge/MCP-compatible-purple)
 
@@ -47,7 +47,7 @@ mcp_servers:
     command: npx
     args:
       - -y
-      - dat-ai-mcp
+      - dat.ai-mcp
     env:
       DAT_AI_API_KEY: your-api-key-here
     timeout: 600
@@ -62,7 +62,7 @@ Add to `claude_desktop_config.json`:
   "mcpServers": {
     "dat-ai": {
       "command": "npx",
-      "args": ["-y", "dat-ai-mcp"],
+      "args": ["-y", "dat.ai-mcp"],
       "env": {
         "DAT_AI_API_KEY": "your-api-key-here"
       }
@@ -73,7 +73,7 @@ Add to `claude_desktop_config.json`:
 
 #### Cursor / other MCP clients
 
-Same pattern: command `npx`, args `["-y", "dat-ai-mcp"]`, env `DAT_AI_API_KEY`.
+Same pattern: command `npx`, args `["-y", "dat.ai-mcp"]`, env `DAT_AI_API_KEY`.
 
 ### Environment variable
 
@@ -113,8 +113,8 @@ dat_completions({
 ## Development
 
 ```bash
-git clone https://github.com/willtholke/dat-ai-mcp.git
-cd dat-ai-mcp
+git clone https://github.com/willtholke/dat.ai-mcp.git
+cd dat.ai-mcp
 npm install
 npm run build
 ```
